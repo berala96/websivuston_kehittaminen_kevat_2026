@@ -1,1 +1,1 @@
-Tämä kansio on webkehitys opintojakson ws01 HTML tehtävää varten.
+Tämä kansio on webkehitys aopintojakson ws01 HTML tehtävää varten.

@@ -1,0 +1,1 @@
+Tämä kansio on webkehitys aopintojakson ws02 HTML tehtävää varten.
