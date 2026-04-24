@@ -4,10 +4,13 @@
 .responsive-container {
       display: flex;
       flex-wrap: wrap;
+      gap: 20px; /* Tämä lisää tilaa sarakkeiden väliin, mikä parantaa luettavuutta ja visuaalista erottelua */
+      margin-bottom: 30px;
     }
     /* flex: 1; tarkoittaa, että jokainen .column vie yhtä paljon tilaa kuin muut sekä mahdollistaa sarakkeiden kasvun ja pienenemisen
     ja padding: 10px; lisää tilaa elementtien ympärille */
     .column {
+      background-color: rgb(157, 174, 216);
       flex: 1;
       padding: 10px;
     }
@@ -24,7 +27,7 @@
       max-width: 60%;
       height: auto;
       display: block; /* Tämä poistaa mahdolliset ylimääräiset tilat kuvan ympäriltä, jotka voivat johtua inline-elementtien käyttäytymisestä */
-      margin: 0 auto; /* Tämä keskittää kuvan vaakasuunnassa, jos se on pienempi kuin vanhemman elementin leveys */
+      margin: 0 auto 30px; /* Tämä keskittää kuvan vaakasuunnassa, jos se on pienempi kuin vanhemman elementin leveys */
     }
 .media-query-box {
       padding: 20px;
@@ -42,17 +45,19 @@
         background-color: lightblue;
       }
     }
+ /*list-style: none; poistaa luettelomerkit mitä tulee ul-li elementeille.*/   
 .responsive-nav .nav-list {
       display: flex;
       list-style: none;
     }
-    
+    /*display: none; piilottaa elementin linkit menu valikon sisään kun alle 600px */
     @media (max-width: 600px) {
       .responsive-nav .nav-list {
         display: none;
       }
-    
+    /* display: block; näyttää menu valikon linkit kun alle 600px ja menu toggle on klikattu */
       .responsive-nav .menu-toggle {
         display: block;
       }
     }
+    
