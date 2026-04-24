@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    /* display: flex; allows the container to use flexbox layout, enabling flexible and responsive design especially for the children. 
+       flex-wrap: wrap; allows the items to wrap onto multiple lines if they exceed the container's width, ensuring that the layout remains responsive on smaller screens. 
+       gap: 10px; adds space between the items for better readability and visual separation. */
+       /*“Lay out my children using Flexbox, and if they don’t fit in one row, let them wrap onto new lines instead of shrinking too much.”*/
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+     
+    /*Parent element .container should have display: flex to enable flexbox layout, 
+       and flex-wrap: wrap allows items to wrap to the next line if they exceed the container's width. 
+       gap adds space between items for better readability 
+      Flex-grow: 1 allows items to grow and fill available space, 
+       flex-shrink: 1 allows items to shrink if necessary, 
+       flex-basis: 200px sets the initial size of the items */
+       /*padding adds space inside each element. Makes boxes larger and easier to read*/
+    .item {
+      flex: 1 1 200px;
+      background-color: #8ca0ff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</body>
+</html>

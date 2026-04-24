@@ -1,0 +1,58 @@
+/* DIV parent container ja tehdään siitä responsiivinen */
+/* display: flex tekee siitä flexbox-kontainerin, joka mahdollistaa joustavan asettelun */
+/* flex-wrap: wrap; sallii erityisesti lapsielementtien rivittymisen, jos tilaa ei riitä yhdelle riville */
+.responsive-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    /* flex: 1; tarkoittaa, että jokainen .column vie yhtä paljon tilaa kuin muut sekä mahdollistaa sarakkeiden kasvun ja pienenemisen
+    ja padding: 10px; lisää tilaa elementtien ympärille */
+    .column {
+      flex: 1;
+      padding: 10px;
+    }
+    /*@media max-width: 600px tarkoittaa, että seuraavat tyylit sovelletaan vain, kun näytön leveys on enintään 600 pikseliä.
+    .column { flex: 100%; } tarkoittaa, että jokainen .column vie koko rivin leveyden, jolloin ne pinoutuvat päällekkäin pienemmillä näytöillä, mikä parantaa luettavuutta ja käytettävyyttä mobiililaitteilla. */
+    @media (max-width: 600px) {
+      .column {
+        flex: 100%;
+      }
+    }
+/* kuva oli aluksi liian suuri, mutta max-width: 100%; rajoittaa kuvan leveyden vanhemman elementin leveyteen, 
+  ja height: auto; säilyttää kuvasuhteen, jolloin kuva skaalautuu oikein ilman vääristymiä. */
+.responsive-image {
+      max-width: 60%;
+      height: auto;
+      display: block; /* Tämä poistaa mahdolliset ylimääräiset tilat kuvan ympäriltä, jotka voivat johtua inline-elementtien käyttäytymisestä */
+      margin: 0 auto; /* Tämä keskittää kuvan vaakasuunnassa, jos se on pienempi kuin vanhemman elementin leveys */
+    }
+.media-query-box {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    @media (max-width: 600px) {
+      .media-query-box {
+        background-color: lightcoral;
+      }
+    }
+    
+    @media (min-width: 601px) {
+      .media-query-box {
+        background-color: lightblue;
+      }
+    }
+.responsive-nav .nav-list {
+      display: flex;
+      list-style: none;
+    }
+    
+    @media (max-width: 600px) {
+      .responsive-nav .nav-list {
+        display: none;
+      }
+    
+      .responsive-nav .menu-toggle {
+        display: block;
+      }
+    }

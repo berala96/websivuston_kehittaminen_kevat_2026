@@ -1,0 +1,1 @@
+In this workshop, you will learn the basics of responsive web design using media queries, flexible layouts, and responsive images.
